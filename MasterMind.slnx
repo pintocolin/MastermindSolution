@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Solution Items/" />
+  <Project Path="Mastermind.Console/Mastermind.Console.csproj" />
+  <Project Path="Mastermind.core/Mastermind.Core.csproj" />
+  <Project Path="Mastermind.Tests/Mastermind.Tests.csproj" />
+</Solution>
