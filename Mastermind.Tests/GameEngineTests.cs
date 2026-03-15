@@ -16,7 +16,7 @@ namespace Mastermind.Tests
         [InlineData("1234", "1111", "+   ")]    // One exact match
 
         // Edge cases
-        [InlineData("1122", "1211", "+---")]    // First '1' is an exact match, second '1' is a correct digit in the wrong position, and both '2's are correct digits in the wrong positions
+        [InlineData("1122", "1211", "+-- ")]    // First '1' is an exact match, one '1' from guess matches secret[1], and guess[1]='2' matches a '2' in secret
         [InlineData("1111", "1122", "++  ")]    // Two exact matches and two incorrect digits
 
         // PRD test cases
