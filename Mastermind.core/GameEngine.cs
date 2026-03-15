@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Mastermind.core
+namespace Mastermind.Core
 {
     public class GameEngine
     {

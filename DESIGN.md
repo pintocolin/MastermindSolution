@@ -21,6 +21,11 @@ The core algorithm for calculating the feedback (the `+` and `-` symbols) is bas
 It first counts the exact matches (`+`) and then counts the partial matches (`-`) without double-counting any digits.
 - This is achieved via a two-pass linear scan to ensure O(n) time complexity while maintaining exact match priority.
 
+## Design Desions
+- **Data Structures:** The answer and guess are stored as arrays of integers for easy indexing and comparison.
+- **Dependency Decoupling:** I intentionally kept the secret code generation outside of the GameEngine. 
+- **Stateless Engine:** This ensures the engine remains stateless and purely functional, which simplifies unit testing and allows the engine to be reused regardless of whether the secret code is generated randomly, provided by a database, or set by a second player.
+
 ## Edge Case Handling
 The implementation specifically addresses the "duplicate digit" problem. 
 *Example: Answer [1,2,1,1] vs Guess [1,1,2,2].*

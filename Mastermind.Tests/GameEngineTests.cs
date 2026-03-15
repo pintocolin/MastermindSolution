@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using Mastermind.core;
+using Mastermind.Core;
 
 namespace Mastermind.Tests
 {
