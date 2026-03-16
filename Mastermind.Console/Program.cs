@@ -39,7 +39,18 @@ namespace Mastermind.ConsoleApp
                     return;
                 }
 
-                Console.WriteLine($"Result: {hint}");
+                // Display hint in brackets to make spaces visible
+                //Updated the console output to display "(no matches)" instead of an empty string.
+                //This improves clarity for the user when a guess yields no correct digits or positions.
+                string trimmedHint = hint.TrimEnd();
+                if (string.IsNullOrEmpty(trimmedHint))
+                {
+                    Console.WriteLine("Result: (no matches)");
+                }
+                else
+                {
+                    Console.WriteLine($"Result: [{hint.TrimEnd()}]");
+                }
             }
 
             Console.WriteLine("\nGame Over.");
