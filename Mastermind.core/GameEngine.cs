@@ -4,8 +4,6 @@ namespace Mastermind.Core
 {
     public class GameEngine
     {
-        string hint = string.Empty;
-
         /// <summary>
         /// 1. Generates the hint string (+ for correct positon and value, - for correct value only).
         /// 2. Pluses are always printed first.
@@ -58,7 +56,7 @@ namespace Mastermind.Core
         /// 1. Validates that the input is exactly 4 digits.
         /// 2. Each digit is between 1 and 6.
         /// </summary>
-        public bool IsValidGuess(string input)
+        public bool IsValidGuess(string? input)
         {
             // Logic to validate the guess
             if (string.IsNullOrWhiteSpace(input) || input.Length != 4)

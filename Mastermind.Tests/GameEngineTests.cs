@@ -7,6 +7,7 @@ namespace Mastermind.Tests
     {
         private readonly GameEngine _engine = new GameEngine();
 
+        // Arrange
         [Theory]
         // Basic test case
         [InlineData("1234", "1234", "++++")]    // Exact match
@@ -21,13 +22,16 @@ namespace Mastermind.Tests
 
         // PRD test cases
         [InlineData("1234", "4233", "++- ")]    // Exact match
-        public void GenerateHint_ReturnCorrectHint(string secreet, string guess, string expectedHint)
+        public void GenerateHint_ReturnCorrectHint(string secret, string guess, string expectedHint)
         {
             // Act
-            var hint = _engine.GenerateHint(secreet, guess);
+            var hint = _engine.GenerateHint(secret, guess);
+
+            // Assert
             Assert.Equal(expectedHint, hint);
         }
 
+        // Arrange
         [Theory]
         [InlineData("1234", true)]
         [InlineData("123", false)]  // Too short
